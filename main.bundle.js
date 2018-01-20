@@ -259,7 +259,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/chat-nav-bar/chat-nav-bar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-header\">\n      <a class=\"navbar-brand\" href=\"https://ng-book.com/2\">\n        <img src=\"assets/images/logos/ng-book-2-minibook.png\"/>\n         ng-book 2\n      </a>\n    </div>\n    <p class=\"navbar-text navbar-right\">\n      <button class=\"btn btn-primary\" type=\"button\">\n        Messages <span class=\"badge\">{{ unreadMessagesCount }}</span>\n      </button>\n    </p>\n  </div>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-default\">\r\n  <div class=\"container-fluid\">\r\n    <div class=\"navbar-header\">\r\n      <a class=\"navbar-brand\" target=\"_blank\" href=\"https://sr.wikipedia.org/wiki/%D0%8B%D0%B0%D1%81%D0%BA%D0%B0%D1%9A%D0%B5_(%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82)\">\r\n        <img src=\"assets/images/logos/chat.png\"/>\r\n         Ćaskanje\r\n      </a>\r\n    </div>\r\n    <p class=\"navbar-text navbar-right\">\r\n      <button class=\"btn btn-primary\" type=\"button\">\r\n        Nepročitane poruke <span class=\"badge\">{{ unreadMessagesCount }}</span>\r\n      </button>\r\n    </p>\r\n  </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -662,11 +662,11 @@ var _a, _b, _c, _d;
 
 
 // the person using the app us Juliet
-var me = new __WEBPACK_IMPORTED_MODULE_0__user_user_model__["a" /* User */]('Juliet', 'assets/images/avatars/female-avatar-1.png');
-var ladycap = new __WEBPACK_IMPORTED_MODULE_0__user_user_model__["a" /* User */]('Lady Capulet', 'assets/images/avatars/female-avatar-2.png');
-var echo = new __WEBPACK_IMPORTED_MODULE_0__user_user_model__["a" /* User */]('Echo Bot', 'assets/images/avatars/male-avatar-1.png');
-var rev = new __WEBPACK_IMPORTED_MODULE_0__user_user_model__["a" /* User */]('Reverse Bot', 'assets/images/avatars/female-avatar-4.png');
-var wait = new __WEBPACK_IMPORTED_MODULE_0__user_user_model__["a" /* User */]('Waiting Bot', 'assets/images/avatars/male-avatar-2.png');
+var me = new __WEBPACK_IMPORTED_MODULE_0__user_user_model__["a" /* User */]('Klijent', 'assets/images/avatars/female-avatar-1.png');
+var ladycap = new __WEBPACK_IMPORTED_MODULE_0__user_user_model__["a" /* User */]('Klijent@', 'assets/images/avatars/female-avatar-2.png');
+var echo = new __WEBPACK_IMPORTED_MODULE_0__user_user_model__["a" /* User */]('Eho Klijent', 'assets/images/avatars/male-avatar-1.png');
+var rev = new __WEBPACK_IMPORTED_MODULE_0__user_user_model__["a" /* User */]('Obrnuti klijent', 'assets/images/avatars/female-avatar-4.png');
+var wait = new __WEBPACK_IMPORTED_MODULE_0__user_user_model__["a" /* User */]('Čekajući klijent', 'assets/images/avatars/male-avatar-2.png');
 var tLadycap = new __WEBPACK_IMPORTED_MODULE_1__thread_thread_model__["a" /* Thread */]('tLadycap', ladycap.name, ladycap.avatarSrc);
 var tEcho = new __WEBPACK_IMPORTED_MODULE_1__thread_thread_model__["a" /* Thread */]('tEcho', echo.name, echo.avatarSrc);
 var tRev = new __WEBPACK_IMPORTED_MODULE_1__thread_thread_model__["a" /* Thread */]('tRev', rev.name, rev.avatarSrc);
@@ -674,32 +674,32 @@ var tWait = new __WEBPACK_IMPORTED_MODULE_1__thread_thread_model__["a" /* Thread
 var initialMessages = [
     new __WEBPACK_IMPORTED_MODULE_2__message_message_model__["a" /* Message */]({
         author: me,
-        sentAt: __WEBPACK_IMPORTED_MODULE_3_moment__().subtract(45, 'minutes').toDate(),
-        text: 'Yet let me weep for such a feeling loss.',
+        sentAt: __WEBPACK_IMPORTED_MODULE_3_moment__().subtract(1, 'minutes').toDate(),
+        text: 'Probne poruke.',
         thread: tLadycap
     }),
     new __WEBPACK_IMPORTED_MODULE_2__message_message_model__["a" /* Message */]({
         author: ladycap,
-        sentAt: __WEBPACK_IMPORTED_MODULE_3_moment__().subtract(20, 'minutes').toDate(),
-        text: 'So shall you feel the loss, but not the friend which you weep for.',
+        sentAt: __WEBPACK_IMPORTED_MODULE_3_moment__().subtract(1, 'minutes').toDate(),
+        text: 'Samo mi pošalji poruku.',
         thread: tLadycap
     }),
     new __WEBPACK_IMPORTED_MODULE_2__message_message_model__["a" /* Message */]({
         author: echo,
         sentAt: __WEBPACK_IMPORTED_MODULE_3_moment__().subtract(1, 'minutes').toDate(),
-        text: "I'll echo whatever you send me",
+        text: "Vrati \u0107u vam poruku koju mi po\u0161aljente",
         thread: tEcho
     }),
     new __WEBPACK_IMPORTED_MODULE_2__message_message_model__["a" /* Message */]({
         author: rev,
-        sentAt: __WEBPACK_IMPORTED_MODULE_3_moment__().subtract(3, 'minutes').toDate(),
-        text: "I'll reverse whatever you send me",
+        sentAt: __WEBPACK_IMPORTED_MODULE_3_moment__().subtract(1, 'minutes').toDate(),
+        text: "Obrnu\u0107u redosled slova u poruci",
         thread: tRev
     }),
     new __WEBPACK_IMPORTED_MODULE_2__message_message_model__["a" /* Message */]({
         author: wait,
-        sentAt: __WEBPACK_IMPORTED_MODULE_3_moment__().subtract(4, 'minutes').toDate(),
-        text: "I'll wait however many seconds you send to me before responding. Try sending '3'",
+        sentAt: __WEBPACK_IMPORTED_MODULE_3_moment__().subtract(1, 'minutes').toDate(),
+        text: "Odgovori\u0107u vam na poruku za onoliko sekundi, koliko mi po\u0161aljete u poruci",
         thread: tWait
     }),
 ];
@@ -742,10 +742,10 @@ var ChatExampleData = (function () {
             var reply;
             if (isNaN(waitTime)) {
                 waitTime = 0;
-                reply = "I didn't understand " + message.text + ". Try sending me a number";
+                reply = "Nerazumem " + message.text + ". Po\u0161alji mi broj";
             }
             else {
-                reply = "I waited " + waitTime + " seconds to send you this.";
+                reply = "\u010Cekao sam " + waitTime + " sekundi dok ti nisam posalo ovu poruku.";
             }
             setTimeout(function () {
                 messagesService.addMessage(new __WEBPACK_IMPORTED_MODULE_2__message_message_model__["a" /* Message */]({
