@@ -8,11 +8,11 @@ import { UsersService } from '../user/users.service';
 import * as moment from 'moment';
 
 // the person using the app us Juliet
-const me: User      = new User('Juliet', 'assets/images/avatars/female-avatar-1.png');
-const ladycap: User = new User('Lady Capulet', 'assets/images/avatars/female-avatar-2.png');
-const echo: User    = new User('Echo Bot', 'assets/images/avatars/male-avatar-1.png');
-const rev: User     = new User('Reverse Bot', 'assets/images/avatars/female-avatar-4.png');
-const wait: User    = new User('Waiting Bot', 'assets/images/avatars/male-avatar-2.png');
+const me: User      = new User('Klijent', 'assets/images/avatars/female-avatar-1.png');
+const ladycap: User = new User('Klijent@', 'assets/images/avatars/female-avatar-2.png');
+const echo: User    = new User('Eho Klijent', 'assets/images/avatars/male-avatar-1.png');
+const rev: User     = new User('Obrnuti klijent', 'assets/images/avatars/female-avatar-4.png');
+const wait: User    = new User('Čekajući klijent', 'assets/images/avatars/male-avatar-2.png');
 
 const tLadycap: Thread = new Thread('tLadycap', ladycap.name, ladycap.avatarSrc);
 const tEcho: Thread    = new Thread('tEcho', echo.name, echo.avatarSrc);
@@ -22,32 +22,32 @@ const tWait: Thread    = new Thread('tWait', wait.name, wait.avatarSrc);
 const initialMessages: Array<Message> = [
   new Message({
     author: me,
-    sentAt: moment().subtract(45, 'minutes').toDate(),
-    text: 'Yet let me weep for such a feeling loss.',
+    sentAt: moment().subtract(1, 'minutes').toDate(),
+    text: 'Probne poruke.',
     thread: tLadycap
   }),
   new Message({
     author: ladycap,
-    sentAt: moment().subtract(20, 'minutes').toDate(),
-    text: 'So shall you feel the loss, but not the friend which you weep for.',
+    sentAt: moment().subtract(1, 'minutes').toDate(),
+    text: 'Samo mi pošalji poruku.',
     thread: tLadycap
   }),
   new Message({
     author: echo,
     sentAt: moment().subtract(1, 'minutes').toDate(),
-    text: `I\'ll echo whatever you send me`,
+    text: `Vrati ću vam poruku koju mi pošaljente`,
     thread: tEcho
   }),
   new Message({
     author: rev,
-    sentAt: moment().subtract(3, 'minutes').toDate(),
-    text: `I\'ll reverse whatever you send me`,
+    sentAt: moment().subtract(1, 'minutes').toDate(),
+    text: `Obrnuću redosled slova u poruci`,
     thread: tRev
   }),
   new Message({
     author: wait,
-    sentAt: moment().subtract(4, 'minutes').toDate(),
-    text: `I\'ll wait however many seconds you send to me before responding. Try sending '3'`,
+    sentAt: moment().subtract(1, 'minutes').toDate(),
+    text: `Odgovoriću vam na poruku za onoliko sekundi, koliko mi pošaljete u poruci`,
     thread: tWait
   }),
 ];
@@ -109,9 +109,9 @@ export class ChatExampleData {
 
         if (isNaN(waitTime)) {
           waitTime = 0;
-          reply = `I didn\'t understand ${message.text}. Try sending me a number`;
+          reply = `Nerazumem ${message.text}. Pošalji mi broj`;
         } else {
-          reply = `I waited ${waitTime} seconds to send you this.`;
+          reply = `Čekao sam ${waitTime} sekundi dok ti nisam posalo ovu poruku.`;
         }
 
         setTimeout(
