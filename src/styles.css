@@ -3878,9 +3878,11 @@ tbody.collapse.in {
 .navbar-brand {
   float: left;
   padding: 15px 15px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 20px;
-  height: 50px; }
+  height: 50px;
+  color: black;
+}
   .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none; }
   .navbar-brand > img {
@@ -5928,8 +5930,8 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-/* 
-  Google Hangouts-like bootstrap css originally from:  
+/*
+  Google Hangouts-like bootstrap css originally from:
   http://bootsnipp.com/snippets/featured/like-hangout-chat
   by SrPatinhas
 
